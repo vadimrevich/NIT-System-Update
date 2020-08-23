@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Wix xmlns="http://schemas.microsoft.com/wix/2006/wi">
+    <Product Id="BF3A29BE-2BB8-4437-B31B-F6517C50A79F" Name="NIT-System-Update" Language="1033" Version="0.0.1.0" Manufacturer="New Internet Technologies Inc." UpgradeCode="966E54BB-CDAB-451C-9E70-D2020ABA1784">
+        <Package Description="Test file in a Product" Comments="Simple test" InstallerVersion="200" Compressed="yes" />
+        <Media Id="1" Cabinet="simple.cab" EmbedCab="yes" />
+        <WixVariable Id="WixUILicenseRtf" Value="license.rtf" />
+        <Directory Id="TARGETDIR" Name="SourceDir">
+            <Directory Id="ProgramFilesFolder" Name="PFiles">
+                <Directory Id="NIT_SYSTEM_UPDATE" Name="NIT-System-Update">
+                    <Component Id="CHOCK.INSTALL.BAT" DiskId="1" Guid="6421A4C9-7556-412D-AAD0-D34C7DBB195B">
+                        <File Id="CHOCK.INSTALL.BAT" Name="chock.install.bat" Source="NIT-System-Update\chock.install.bat" />
+                    </Component>
+                    <Component Id="DESCRIPT.ION" DiskId="1" Guid="75C41662-38DB-48C4-8CBB-9E09BD17B126">
+                        <File Id="DESCRIPT.ION" Name="descript.ion" Source="NIT-System-Update\descript.ion" />
+                    </Component>
+                    <Component Id="DOTNETFX40_FULL_X86_X64.BAT" DiskId="1" Guid="D03907E2-C621-4023-A1F4-42839FFD7C8D">
+                        <File Id="DOTNETFX40_FULL_X86_X64.BAT" Name="dotNetFx40_Full_x86_x64.bat" Source="NIT-System-Update\dotNetFx40_Full_x86_x64.bat" />
+                    </Component>
+                    <Component Id="EIE11_RU_RU_WOL_WIN7.BAT" DiskId="1" Guid="8030DA8C-4720-4D94-B5C1-79E830AABB0D">
+                        <File Id="EIE11_RU_RU_WOL_WIN7.BAT" Name="EIE11_RU-RU_WOL_WIN7.bat" Source="NIT-System-Update\EIE11_RU-RU_WOL_WIN7.bat" />
+                    </Component>
+                    <Component Id="EIE11_RU_RU_WOL_WIN764.BAT" DiskId="1" Guid="29C7D576-2691-4685-8076-6651120AABCE">
+                        <File Id="EIE11_RU_RU_WOL_WIN764.BAT" Name="EIE11_RU-RU_WOL_WIN764.bat" Source="NIT-System-Update\EIE11_RU-RU_WOL_WIN764.bat" />
+                    </Component>
+                    <Component Id="IE11_WINDOWS6.1_X64_RU_RU.BAT" DiskId="1" Guid="864FECD7-B4F9-4DB4-88C4-1C0FA302186B">
+                        <File Id="IE11_WINDOWS6.1_X64_RU_RU.BAT" Name="IE11-Windows6.1-x64-ru-ru.bat" Source="NIT-System-Update\IE11-Windows6.1-x64-ru-ru.bat" />
+                    </Component>
+                    <Component Id="IE11_WINDOWS6.1_X86_RU_RU.BAT" DiskId="1" Guid="F6C50C75-BD7C-4889-B240-75723121F39F">
+                        <File Id="IE11_WINDOWS6.1_X86_RU_RU.BAT" Name="IE11-Windows6.1-x86-ru-ru.bat" Source="NIT-System-Update\IE11-Windows6.1-x86-ru-ru.bat" />
+                    </Component>
+                    <Component Id="INSTALLMAINDISTRIB.TMP.INI" DiskId="1" Guid="FB0EBC49-CB32-4934-B500-0323089762B0">
+                        <File Id="INSTALLMAINDISTRIB.TMP.INI" Name="installmaindistrib.tmp.ini" Source="NIT-System-Update\installmaindistrib.tmp.ini" />
+                    </Component>
+                    <Component Id="UPDATE_WINDOWS.BAT" DiskId="1" Guid="12E4AE8E-6B3B-40AF-B5BB-552053F9A2CB">
+                        <File Id="UPDATE_WINDOWS.BAT" Name="Update-Windows.bat" Source="NIT-System-Update\Update-Windows.bat" />
+                    </Component>
+                    <Component Id="UPDATE_WINDOWS.VBS" DiskId="1" Guid="1A23494B-8C55-4450-8B1C-B55D3DC0AE86">
+                        <File Id="UPDATE_WINDOWS.VBS" Name="Update-Windows.vbs" Source="NIT-System-Update\Update-Windows.vbs" />
+                    </Component>
+                    <Component Id="W2K12_KB3191565_X64.MSU.BAT" DiskId="1" Guid="E34A8CD4-10B5-475F-A98A-C096D6A549F7">
+                        <File Id="W2K12_KB3191565_X64.MSU.BAT" Name="W2K12-KB3191565-x64.msu.bat" Source="NIT-System-Update\W2K12-KB3191565-x64.msu.bat" />
+                    </Component>
+                    <Component Id="WGET.EXE" DiskId="1" Guid="8B336370-8A59-4E5E-B202-E062BE6AD3A5">
+                        <File Id="WGET.EXE" Name="wget.exe" Source="NIT-System-Update\wget.exe" />
+                    </Component>
+                    <Component Id="WIN7_KB3191566_X86.BAT" DiskId="1" Guid="8A7F6590-D4CC-41C4-98F3-D54A5C61E689">
+                        <File Id="WIN7_KB3191566_X86.BAT" Name="Win7-KB3191566-x86.bat" Source="NIT-System-Update\Win7-KB3191566-x86.bat" />
+                    </Component>
+                    <Component Id="WIN7ANDW2K8R2_KB3191566_X64.BAT" DiskId="1" Guid="39B86F02-40C5-4072-9430-12FC87DC538B">
+                        <File Id="WIN7ANDW2K8R2_KB3191566_X64.BAT" Name="Win7AndW2K8R2-KB3191566-x64.bat" Source="NIT-System-Update\Win7AndW2K8R2-KB3191566-x64.bat" />
+                    </Component>
+                    <Component Id="WIN8.1_KB3191564_X86.BAT" DiskId="1" Guid="C0E10978-670F-4519-8BAE-B956D3F6EF01">
+                        <File Id="WIN8.1_KB3191564_X86.BAT" Name="Win8.1-KB3191564-x86.bat" Source="NIT-System-Update\Win8.1-KB3191564-x86.bat" />
+                    </Component>
+                    <Component Id="WIN8.1ANDW2K12R2_KB3191564_X64.BAT" DiskId="1" Guid="3D532B18-8D14-4672-A2D8-B55E820ED58B">
+                        <File Id="WIN8.1ANDW2K12R2_KB3191564_X64.BAT" Name="Win8.1AndW2K12R2-KB3191564-x64.bat" Source="NIT-System-Update\Win8.1AndW2K12R2-KB3191564-x64.bat" />
+                    </Component>
+                    <Component Id="WINDOWS6.0_KB2506146_X64.BAT" DiskId="1" Guid="F19060D7-3EAF-4592-BE88-5F6C13188ACD">
+                        <File Id="WINDOWS6.0_KB2506146_X64.BAT" Name="Windows6.0-KB2506146-x64.bat" Source="NIT-System-Update\Windows6.0-KB2506146-x64.bat" />
+                    </Component>
+                    <Component Id="WINDOWS6.0_KB2506146_X86.BAT" DiskId="1" Guid="3B703108-5D56-4E7B-9B8C-37B67221D2A3">
+                        <File Id="WINDOWS6.0_KB2506146_X86.BAT" Name="Windows6.0-KB2506146-x86.bat" Source="NIT-System-Update\Windows6.0-KB2506146-x86.bat" />
+                    </Component>
+                    <Component Id="WINDOWS6.1_KB2506143_X64.BAT" DiskId="1" Guid="A349B850-0D2A-4A18-BA45-14C417832C72">
+                        <File Id="WINDOWS6.1_KB2506143_X64.BAT" Name="Windows6.1-KB2506143-x64.bat" Source="NIT-System-Update\Windows6.1-KB2506143-x64.bat" />
+                    </Component>
+                    <Component Id="WINDOWS6.1_KB2506143_X86.BAT" DiskId="1" Guid="B82B6DBC-709F-4C19-9BE9-7DE940B8B2DE">
+                        <File Id="WINDOWS6.1_KB2506143_X86.BAT" Name="Windows6.1-KB2506143-x86.bat" Source="NIT-System-Update\Windows6.1-KB2506143-x86.bat" />
+                    </Component>
+                    <Component Id="WINDOWS6.1_KB2533623_X64.BAT" DiskId="1" Guid="A0753D3F-E0EB-40D5-BEB8-0C4FDCFFB5CD">
+                        <File Id="WINDOWS6.1_KB2533623_X64.BAT" Name="Windows6.1-KB2533623-x64.bat" Source="NIT-System-Update\Windows6.1-KB2533623-x64.bat" />
+                    </Component>
+                    <Component Id="WINDOWS6.1_KB2533623_X86.BAT" DiskId="1" Guid="B2B7D3E6-02BA-4D7B-B5D7-F4602DD4E1F1">
+                        <File Id="WINDOWS6.1_KB2533623_X86.BAT" Name="Windows6.1-KB2533623-x86.bat" Source="NIT-System-Update\Windows6.1-KB2533623-x86.bat" />
+                    </Component>
+                    <Component Id="WINDOWS6.1_KB2639308_X64.BAT" DiskId="1" Guid="06E23D9B-4A37-4D11-83B6-A08F62A69B6D">
+                        <File Id="WINDOWS6.1_KB2639308_X64.BAT" Name="Windows6.1-KB2639308-x64.bat" Source="NIT-System-Update\Windows6.1-KB2639308-x64.bat" />
+                    </Component>
+                    <Component Id="WINDOWS6.1_KB2639308_X86.BAT" DiskId="1" Guid="C815A4A0-6AD6-45E0-BF44-9F4D8A926595">
+                        <File Id="WINDOWS6.1_KB2639308_X86.BAT" Name="Windows6.1-KB2639308-x86.bat" Source="NIT-System-Update\Windows6.1-KB2639308-x86.bat" />
+                    </Component>
+                    <Component Id="WINDOWS6.1_KB2670838_X64.BAT" DiskId="1" Guid="87C83470-6DC0-4EAA-85B0-CB2ED748D217">
+                        <File Id="WINDOWS6.1_KB2670838_X64.BAT" Name="Windows6.1-KB2670838-x64.bat" Source="NIT-System-Update\Windows6.1-KB2670838-x64.bat" />
+                    </Component>
+                    <Component Id="WINDOWS6.1_KB2670838_X86.BAT" DiskId="1" Guid="B3802B3C-DEED-4924-BFC6-AB74487C0EC0">
+                        <File Id="WINDOWS6.1_KB2670838_X86.BAT" Name="Windows6.1-KB2670838-x86.bat" Source="NIT-System-Update\Windows6.1-KB2670838-x86.bat" />
+                    </Component>
+                    <Component Id="WINDOWS6.1_KB2729094_V2_X64.BAT" DiskId="1" Guid="BF648B3C-CE27-47F2-88A4-3BB29FC4DF9F">
+                        <File Id="WINDOWS6.1_KB2729094_V2_X64.BAT" Name="Windows6.1-KB2729094-v2-x64.bat" Source="NIT-System-Update\Windows6.1-KB2729094-v2-x64.bat" />
+                    </Component>
+                    <Component Id="WINDOWS6.1_KB2729094_V2_X86.BAT" DiskId="1" Guid="3345D569-AE9F-4EF0-AD8D-A3F3CF7C476C">
+                        <File Id="WINDOWS6.1_KB2729094_V2_X86.BAT" Name="Windows6.1-KB2729094-v2-x86.bat" Source="NIT-System-Update\Windows6.1-KB2729094-v2-x86.bat" />
+                    </Component>
+                    <Component Id="WINDOWS6.1_KB2731771_X64.BAT" DiskId="1" Guid="63F68BDC-9F61-4A2C-A061-C26B859AB7D3">
+                        <File Id="WINDOWS6.1_KB2731771_X64.BAT" Name="Windows6.1-KB2731771-x64.bat" Source="NIT-System-Update\Windows6.1-KB2731771-x64.bat" />
+                    </Component>
+                    <Component Id="WINDOWS6.1_KB2731771_X86.BAT" DiskId="1" Guid="64560191-EEF7-4803-A82F-55FBA0FF0B4D">
+                        <File Id="WINDOWS6.1_KB2731771_X86.BAT" Name="Windows6.1-KB2731771-x86.bat" Source="NIT-System-Update\Windows6.1-KB2731771-x86.bat" />
+                    </Component>
+                    <Component Id="WINDOWS6.1_KB2786081_X64.BAT" DiskId="1" Guid="D7506894-F0A3-48BC-842F-440EDBD55F09">
+                        <File Id="WINDOWS6.1_KB2786081_X64.BAT" Name="Windows6.1-KB2786081-x64.bat" Source="NIT-System-Update\Windows6.1-KB2786081-x64.bat" />
+                    </Component>
+                    <Component Id="WINDOWS6.1_KB2786081_X86.BAT" DiskId="1" Guid="E88FEB2A-FCA3-437C-9DB7-26AB9CB6713F">
+                        <File Id="WINDOWS6.1_KB2786081_X86.BAT" Name="Windows6.1-KB2786081-x86.bat" Source="NIT-System-Update\Windows6.1-KB2786081-x86.bat" />
+                    </Component>
+                    <Component Id="WINDOWS6.1_KB2819745_X64_MULTIPKG.BAT" DiskId="1" Guid="FBF08406-C139-4CC4-9EF4-FD3AFF49F51F">
+                        <File Id="WINDOWS6.1_KB2819745_X64_MULTIPKG.BAT" Name="Windows6.1-KB2819745-x64-MultiPkg.bat" Source="NIT-System-Update\Windows6.1-KB2819745-x64-MultiPkg.bat" />
+                    </Component>
+                    <Component Id="WINDOWS6.1_KB2819745_X86_MULTIPKG.BAT" DiskId="1" Guid="5256B6C5-CE87-476A-9E97-540707A568DD">
+                        <File Id="WINDOWS6.1_KB2819745_X86_MULTIPKG.BAT" Name="Windows6.1-KB2819745-x86-MultiPkg.bat" Source="NIT-System-Update\Windows6.1-KB2819745-x86-MultiPkg.bat" />
+                    </Component>
+                    <Component Id="WINDOWS6.1_KB2834140_V2_X64.BAT" DiskId="1" Guid="C32FF6D4-4291-474A-97B9-8C1B25486017">
+                        <File Id="WINDOWS6.1_KB2834140_V2_X64.BAT" Name="Windows6.1-KB2834140-v2-x64.bat" Source="NIT-System-Update\Windows6.1-KB2834140-v2-x64.bat" />
+                    </Component>
+                    <Component Id="WINDOWS6.1_KB2834140_V2_X86.BAT" DiskId="1" Guid="62E314EA-57DE-4E61-8BC2-0A176345CBAF">
+                        <File Id="WINDOWS6.1_KB2834140_V2_X86.BAT" Name="Windows6.1-KB2834140-v2-x86.bat" Source="NIT-System-Update\Windows6.1-KB2834140-v2-x86.bat" />
+                    </Component>
+                    <Component Id="WINDOWS6.1_KB2882822_X64.BAT" DiskId="1" Guid="9FFB52B2-7B11-4700-B9A7-B75392245521">
+                        <File Id="WINDOWS6.1_KB2882822_X64.BAT" Name="Windows6.1-KB2882822-x64.bat" Source="NIT-System-Update\Windows6.1-KB2882822-x64.bat" />
+                    </Component>
+                    <Component Id="WINDOWS6.1_KB2882822_X86.BAT" DiskId="1" Guid="9D97B1F1-5155-4085-BAE4-91883DEDD4AB">
+                        <File Id="WINDOWS6.1_KB2882822_X86.BAT" Name="Windows6.1-KB2882822-x86.bat" Source="NIT-System-Update\Windows6.1-KB2882822-x86.bat" />
+                    </Component>
+                    <Component Id="WINDOWS6.1_KB2888049_X64.BAT" DiskId="1" Guid="521BA36E-E630-432B-982E-98B25914AF38">
+                        <File Id="WINDOWS6.1_KB2888049_X64.BAT" Name="Windows6.1-KB2888049-x64.bat" Source="NIT-System-Update\Windows6.1-KB2888049-x64.bat" />
+                    </Component>
+                    <Component Id="WINDOWS6.1_KB2888049_X86.BAT" DiskId="1" Guid="5444A25E-4800-4B70-A73D-2AEA68CCE922">
+                        <File Id="WINDOWS6.1_KB2888049_X86.BAT" Name="Windows6.1-KB2888049-x86.bat" Source="NIT-System-Update\Windows6.1-KB2888049-x86.bat" />
+                    </Component>
+                </Directory>
+            </Directory>
+        </Directory>
+        <Feature Id="DefaultFeature" Title="Main Feature" Level="1">
+            <ComponentRef Id="DESCRIPT.ION" />
+            <ComponentRef Id="INSTALLMAINDISTRIB.TMP.INI" />
+            <ComponentRef Id="UPDATE_WINDOWS.BAT" />
+            <ComponentRef Id="UPDATE_WINDOWS.VBS" />
+            <ComponentRef Id="WGET.EXE" />
+            <ComponentRef Id="CHOCK.INSTALL.BAT" />
+            <ComponentRef Id="DOTNETFX40_FULL_X86_X64.BAT" />
+            <ComponentRef Id="EIE11_RU_RU_WOL_WIN7.BAT" />
+            <ComponentRef Id="EIE11_RU_RU_WOL_WIN764.BAT" />
+            <ComponentRef Id="W2K12_KB3191565_X64.MSU.BAT" />
+            <ComponentRef Id="WIN8.1_KB3191564_X86.BAT" />
+            <ComponentRef Id="WIN8.1ANDW2K12R2_KB3191564_X64.BAT" />
+            <ComponentRef Id="WINDOWS6.0_KB2506146_X64.BAT" />
+            <ComponentRef Id="WINDOWS6.0_KB2506146_X86.BAT" />
+            <ComponentRef Id="WINDOWS6.1_KB2506143_X64.BAT" />
+            <ComponentRef Id="WINDOWS6.1_KB2506143_X86.BAT" />
+            <ComponentRef Id="WINDOWS6.1_KB2533623_X64.BAT" />
+            <ComponentRef Id="WINDOWS6.1_KB2533623_X86.BAT" />
+            <ComponentRef Id="WINDOWS6.1_KB2639308_X64.BAT" />
+            <ComponentRef Id="WINDOWS6.1_KB2639308_X86.BAT" />
+            <ComponentRef Id="WINDOWS6.1_KB2670838_X64.BAT" />
+            <ComponentRef Id="WINDOWS6.1_KB2670838_X86.BAT" />
+            <ComponentRef Id="WINDOWS6.1_KB2729094_V2_X64.BAT" />
+            <ComponentRef Id="WINDOWS6.1_KB2729094_V2_X86.BAT" />
+            <ComponentRef Id="WINDOWS6.1_KB2731771_X64.BAT" />
+            <ComponentRef Id="WINDOWS6.1_KB2731771_X86.BAT" />
+            <ComponentRef Id="WINDOWS6.1_KB2786081_X64.BAT" />
+            <ComponentRef Id="WINDOWS6.1_KB2786081_X86.BAT" />
+            <ComponentRef Id="WINDOWS6.1_KB2819745_X64_MULTIPKG.BAT" />
+            <ComponentRef Id="WINDOWS6.1_KB2819745_X86_MULTIPKG.BAT" />
+            <ComponentRef Id="WINDOWS6.1_KB2834140_V2_X64.BAT" />
+            <ComponentRef Id="WINDOWS6.1_KB2834140_V2_X86.BAT" />
+            <ComponentRef Id="WINDOWS6.1_KB2882822_X64.BAT" />
+            <ComponentRef Id="WINDOWS6.1_KB2882822_X86.BAT" />
+            <ComponentRef Id="WINDOWS6.1_KB2888049_X64.BAT" />
+            <ComponentRef Id="WINDOWS6.1_KB2888049_X86.BAT" />
+            <ComponentRef Id="IE11_WINDOWS6.1_X64_RU_RU.BAT" />
+            <ComponentRef Id="IE11_WINDOWS6.1_X86_RU_RU.BAT" />
+            <ComponentRef Id="WIN7_KB3191566_X86.BAT" />
+            <ComponentRef Id="WIN7ANDW2K8R2_KB3191566_X64.BAT" />
+        </Feature>
+        <UI />
+        <UIRef Id="WixUI_Minimal" />
+        <Binary Id="UpdateWindowsId" SourceFile="NIT-System-Update\Update-Windows.vbs" />
+        <CustomAction Id="UpdateWindows" BinaryKey="UpdateWindowsId" Execute="deferred" HideTarget="no" Impersonate="no" Return="check" VBScriptCall="" />
+        <InstallExecuteSequence>
+            <Custom Action="UpdateWindows" Before="InstallFinalize" />
+        </InstallExecuteSequence>
+        <UIRef Id="WixUI_Minimal" />
+    </Product>
+</Wix>
