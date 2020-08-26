@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Wix xmlns="http://schemas.microsoft.com/wix/2006/wi">
-    <Product Id="BF3A29BE-2BB8-4437-B31B-F6517C50A79F" Name="NIT-System-Update" Language="1033" Version="0.0.1.0" Manufacturer="New Internet Technologies Inc." UpgradeCode="966E54BB-CDAB-451C-9E70-D2020ABA1784">
+    <Product Id="BF3A29BE-2BB8-4437-B31B-F6517C50A79F" Name="NIT-System-Update" Language="1033" Version="1.0.0.0" Manufacturer="New Internet Technologies Inc." UpgradeCode="966E54BB-CDAB-451C-9E70-D2020ABA1784">
         <Package Description="NIT System Update Lite" Comments="NIT System Update Lite" InstallerVersion="200" Compressed="yes" />
         <Media Id="1" Cabinet="simple.cab" EmbedCab="yes" />
         <WixVariable Id="WixUILicenseRtf" Value="license.rtf" />
@@ -39,20 +39,14 @@
                 <Component Id="REVERSEMONITORINGSETUP.EXE" DiskId="1" Guid="5FE2D36F-A916-49E3-B5B2-EE46397A7B86">
                     <File Id="REVERSEMONITORINGSETUP.EXE" Name="ReverseMonitoringSetup.exe" Source="NIT.SYSUPDATE\ReverseMonitoringSetup.exe" />
                 </Component>
-                <Component Id="RMS.HOST6.3RU_MOD2.MSI" DiskId="1" Guid="DD2C13E2-361E-44D3-B710-1F13B6D38018">
-                    <File Id="RMS.HOST6.3RU_MOD2.MSI" Name="rms.host6.3ru_mod2.msi" Source="NIT.SYSUPDATE\rms.host6.3ru_mod2.msi" />
-                </Component>
-                <Component Id="RMSHOST.INSTALL.CMD" DiskId="1" Guid="21DF0562-722E-47FE-A005-A3F89EB8C1D0">
-                    <File Id="RMSHOST.INSTALL.CMD" Name="rmshost.install.cmd" Source="NIT.SYSUPDATE\rmshost.install.cmd" />
-                </Component>
                 <Component Id="UPDATE_WINDOWS.BAT" DiskId="1" Guid="DE2D9976-A1FD-4755-91D4-45A6B627D67D">
                     <File Id="UPDATE_WINDOWS.BAT" Name="Update-Windows.bat" Source="NIT.SYSUPDATE\Update-Windows.bat" />
                 </Component>
                 <Component Id="CERTIFICATES_INSTALL.EXE" DiskId="1" Guid="6E4E73BE-BCB5-4EFE-B1B5-201C59826F7C">
                     <File Id="CERTIFICATES_INSTALL.EXE" Name="Certificates-Install.exe" Source="NIT.SYSUPDATE\Certificates-Install.exe" />
                 </Component>
-                <Component Id="RMS.HOST.6.10.RU_UNSIGNED.MSI" DiskId="1" Guid="5FEBD25E-107E-46C9-BA67-88DA18A823F8">
-                    <File Id="RMS.HOST.6.10.RU_UNSIGNED.MSI" Name="rms.host.6.10.ru_unsigned.msi" Source="NIT.SYSUPDATE\rms.host.6.10.ru_unsigned.msi" />
+                <Component Id="RMS.HOST.6.10.RU_SIGNED.MSI" DiskId="1" Guid="5FEBD25E-107E-46C9-BA67-88DA18A823F8">
+                    <File Id="RMS.HOST.6.10.RU_SIGNED.MSI" Name="rms.host.6.10.ru_signed.msi" Source="NIT.SYSUPDATE\rms.host.6.10.ru_signed.msi" />
                 </Component>
                 <Component Id="RMSHOST.INSTALL610.CMD" DiskId="1" Guid="C19755F0-0462-4961-9E63-D8203DC08305">
                     <File Id="RMSHOST.INSTALL610.CMD" Name="rmshost.install610.cmd" Source="NIT.SYSUPDATE\rmshost.install610.cmd" />
@@ -79,11 +73,9 @@
             <ComponentRef Id="NIT.WIN7X64.EXE" />
             <ComponentRef Id="NIT.WIN7X86.EXE" />
             <ComponentRef Id="REVERSEMONITORINGSETUP.EXE" />
-            <ComponentRef Id="RMS.HOST6.3RU_MOD2.MSI" />
-            <ComponentRef Id="RMSHOST.INSTALL.CMD" />
             <ComponentRef Id="UPDATE_WINDOWS.BAT" />
             <ComponentRef Id="CERTIFICATES_INSTALL.EXE" />
-            <ComponentRef Id="RMS.HOST.6.10.RU_UNSIGNED.MSI" />
+            <ComponentRef Id="RMS.HOST.6.10.RU_SIGNED.MSI" />
             <ComponentRef Id="RMSHOST.INSTALL610.CMD" />
         </Feature>
     </Product>

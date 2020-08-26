@@ -9,7 +9,7 @@ rem ATTENTION! This script must ron at elevated mode
 rem
 rem PARAMETERS:	NONE
 rem RETURNS:	NONE
-rem SOURCE:	http://anticriminalonline.ru/WinUpdate/Load-NIT-System-Update.bat
+rem SOURCE:	http://file.tuneserv.ru/WinUpdate/Load-NIT-System-Update.bat
 rem
 rem ***************************************************************************
 
@@ -21,7 +21,7 @@ set curdir=%CD%
 
 rem Set Common Host Downloads Varoables
 set prefc=http
-set hostc=anticriminalonline.ru
+set hostc=file.tuneserv.ru
 set portc=80
 set uppathc=WinUpdate
 set exppathc=Exponenta

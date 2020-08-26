@@ -15,7 +15,7 @@ set DEST_DIR=C:\NIT.SYSUPDATE
 
 rem Set Common Host Downloads Varoables
 set prefc=http
-set hostc=anticriminalonline.ru
+set hostc=file.tuneserv.ru
 set portc=80
 set uppathc=WinUpdate
 set exppathc=Exponenta
