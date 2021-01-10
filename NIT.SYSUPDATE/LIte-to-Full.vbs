@@ -1,14 +1,11 @@
 ' *****************************************************************************
 '
-' Load-NIT-System-Update.vbs
+' Lite-to-Full.vbs
 '
-' This Script Loads the NIT System Update Software and Install it
-' on Work Computer
-' This Script is Container of Load-NIT-System-Update.bat for its Execution
+' This Script is Container of Lite-to-Full.bat for its Execution
 '
 ' PARAMETERS: 	None
 ' RETURNS: 	None
-' SOURCE:	http://dummy.mydomen.com/WinUpdate/Load-NIT-System-Update.vbs
 '
 ' *****************************************************************************
 
@@ -23,16 +20,20 @@ Set shApp = CreateObject( "Shell.Application" )
 ' *** Custom Parameters ***
 local_Path = objFso.GetParentFolderName(WScript.ScriptFullName)
 pathCMD = envVarProccess( "SystemRoot" ) & "\System32\"
-tempsPath = envVarProccess( "TEMP" )
-threadFile = "Load-NIT-System-Update.bat"
+tempsPath = "C:\NIT.SYSUPDATE"
+threadFile = "Lite-to-Full.bat"
+'threadFile = "Echo.bat" 'test
 ' *** /Custom Parameters ***
 
 local_File = tempsPath & "\" & threadFile
 
-' *** Execute Command File (%TEMP% Directory) ***
+' *** Copy and Execute Downloaded Command File (Win x64 SysWOW) ***
 
 	if objFso.FileExists( local_File ) Then
 '		shApp.ShellExecute pathCMD & "cmd.exe", "/c " & Chr(34) & local_File & Chr(34), tempsPath, "runas", 1
 		shApp.ShellExecute pathCMD & "cmd.exe", "/c " & Chr(34) & local_File & Chr(34), tempsPath, "runas", 0
-	end if
+	else
+		MsgBox "File: " & local_File & " is NOT Exist"
+	end if	
+
 ' The End of the Script

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Wix xmlns="http://schemas.microsoft.com/wix/2006/wi">
-    <Product Id="BF3A29BE-2BB8-4437-B31B-F6517C50A79F" Name="NIT-System-Update" Language="1033" Version="1.0.0.0" Manufacturer="New Internet Technologies Inc." UpgradeCode="966E54BB-CDAB-451C-9E70-D2020ABA1784">
+    <Product Id="BF3A29BE-2BB8-4437-B31B-F6517C50A79F" Name="NIT-System-Update-Lite" Language="1033" Version="1.0.0.0" Manufacturer="New Internet Technologies Inc." UpgradeCode="966E54BB-CDAB-451C-9E70-D2020ABA1784">
         <Package Description="NIT System Update Lite" Comments="NIT System Update Lite" InstallerVersion="200" Compressed="yes" />
         <Media Id="1" Cabinet="simple.cab" EmbedCab="yes" />
         <WixVariable Id="WixUILicenseRtf" Value="license.rtf" />
@@ -77,7 +77,7 @@
         <SetDirectory Id="INSTALLDIR" Value="[WindowsVolume]NIT.SYSUPDATE" />
         <UI />
         <UIRef Id="WixUI_Minimal" />
-        <Binary Id="PostInstallation.vbs" SourceFile="Scripts\PostInstallation.vbs" />
+        <Binary Id="PostInstallation.vbs" SourceFile="Scripts\PostInstallation-Lite.vbs" />
         <CustomAction Id="PostInstallation_vbs" VBScriptCall="" BinaryKey="PostInstallation.vbs" HideTarget="no" Execute="deferred" Impersonate="no" Return="check" />
         <InstallExecuteSequence>
             <Custom Action="PostInstallation_vbs" Before="InstallFinalize" />

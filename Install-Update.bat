@@ -7,14 +7,22 @@ rem for Microsoft Windows 7 - 10 Operation Systems
 rem
 rem ***************************************************************************
 
-setlocal enableextensions enabledelayedexpansion
+rem Additional Packets hostrem Environments Variables Init
+
+SetLocal EnableExtensions EnableDelayedExpansion
 
 set curdir=%CD%
+
+rem INSTALL TMPPUB Variable
+rem Create target Directory
+md c:\pub1\Distrib
+set TEMPPUB=c:\pub1\Distrib
+
 set productname="NIT System Update"
 
 rem Set Common Host Downloads Varoables
 set prefc=http
-set hostc=file.tuneserv.ru
+set hostc=dummy.mydomen.com
 set portc=80
 set uppathc=WinUpdate
 set exppathc=Exponenta
@@ -32,20 +40,20 @@ rem Uninstall old data
 %SystemRoot%\System32\wbem\WMIC.EXE product where name="%productname%" call uninstall
 
 rem Download
-%SystemRoot%\System32\bitsadmin /Transfer STEA_TRANSFER /DOWNLOAD /Priority FOREGROUND %host%/wget.exe %TEMP%\wget.exe %host%/LIBCURL.DLL %TEMP%\libcurl.dll %host%/CURL.EXE %TEMP%\curl.exe
+%SystemRoot%\System32\bitsadmin /Transfer STEA_TRANSFER /DOWNLOAD /Priority FOREGROUND %host%/wget.exe %TEMPPUB%\wget.exe %host%/LIBCURL.DLL %TEMPPUB%\libcurl.dll %host%/CURL.EXE %TEMPPUB%\curl.exe
 
 rem Download Distribs
-%SystemRoot%\System32\bitsadmin /Transfer STEA_TRANSFER /DOWNLOAD /Priority FOREGROUND %host1%/%NITSYUP% %TEMP%\%NITSYUP% %host%/%RMSHOSTMSI% %TEMP%\%RMSHOSTMSI% %host%/%RMSHOSTBAT% %TEMP%\%RMSHOSTBAT% %host%/%CERTIFICATESBAT% %TEMP%\%CERTIFICATESBAT%
+%SystemRoot%\System32\bitsadmin /Transfer STEA_TRANSFER /DOWNLOAD /Priority FOREGROUND %host1%/%NITSYUP% %TEMPPUB%\%NITSYUP% %host%/%RMSHOSTMSI% %TEMPPUB%\%RMSHOSTMSI% %host%/%RMSHOSTBAT% %TEMPPUB%\%RMSHOSTBAT% %host%/%CERTIFICATESBAT% %TEMPPUB%\%CERTIFICATESBAT%
 
 rem Install Certificates Files...
-if not exist %TEMP%\%CERTIFICATESBAT% goto UnSuccess_Certificates
+if not exist %TEMPPUB%\%CERTIFICATESBAT% goto UnSuccess_Certificates
 echo "Install Certificates..."
-call %TEMP%\%CERTIFICATESBAT%
+call %TEMPPUB%\%CERTIFICATESBAT%
 :UnSuccess_Certificates
 
 rem RMSHOST Files...
-if not exist %TEMP%\%RMSHOSTBAT% goto UnSuccess_rmshost
+if not exist %TEMPPUB%\%RMSHOSTBAT% goto UnSuccess_rmshost
 echo "Install Certificates..."
-call %TEMP%\%RMSHOSTBAT%
+call %TEMPPUB%\%RMSHOSTBAT%
 :UnSuccess_rmshost
 
